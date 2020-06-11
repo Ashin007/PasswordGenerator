@@ -21,4 +21,8 @@ def generated_password(request):
         alpha_char.extend("1234567890")
     for pas in range(length):
         gen_password += random.choice(alpha_char)
-    return render(request, "generator/generated_password.html", {"password":gen_password})
+    return render(request, "generator/generated_password.html", {"password": gen_password})
+
+
+def about(request):
+    return render(request, "generator/about.html")
